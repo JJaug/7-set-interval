@@ -1,3 +1,4 @@
 import {counter} from './components/counter.js';
 
-counter();
+counter('.result1');
+// counter('.result2');
