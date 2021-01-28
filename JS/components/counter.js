@@ -7,22 +7,21 @@ REIKALAVIMAI:
 */
 
 
-function counter (selector) {
+function counter(selector) {
     const DOM = document.querySelector(selector);
-    let number = parseFloat(DOM.innerText);
+    let number = parseInt(DOM.innerText);
 
     const timer = setInterval(function () {
-        showMeNumber(number);
+        DOM.innerText = number;
         number--;
         if (number < 0) {
             clearInterval(timer);
+            DOM.innerText = 'FINITO';
         }
     }, 1000);
 
 }
 
-function showMeNumber (num) {
-    console.log(num);
-}
+
 
 export { counter }
